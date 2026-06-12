@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ernst Legaspi's product portfolio." />
+  <title>Ernst Legaspi - Portfolio</title>
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="pixel-rain" aria-hidden="true"></div>
+
+  <aside class="sidebar" aria-label="Portfolio navigation" data-expanded="false">
+    <button class="sidebar-toggle" type="button" aria-label="Open sidebar" aria-expanded="false">
+      <span aria-hidden="true">▦</span>
+    </button>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-link" href="#me" aria-label="Me" data-view-target="me">
+        <span class="sidebar-icon" aria-hidden="true">●</span>
+        <span class="sidebar-label">Me</span>
+      </a>
+      <a class="sidebar-link" href="#products" aria-label="Products" data-view-target="products">
+        <span class="sidebar-icon" aria-hidden="true">◆</span>
+        <span class="sidebar-label">Products</span>
+      </a>
+      <a class="sidebar-link" href="#projects" aria-label="Projects" data-view-target="projects">
+        <span class="sidebar-icon" aria-hidden="true">■</span>
+        <span class="sidebar-label">Projects</span>
+      </a>
+      <a class="sidebar-link" href="#skills" aria-label="Skills" data-view-target="skills">
+        <span class="sidebar-icon" aria-hidden="true">▲</span>
+        <span class="sidebar-label">Skills</span>
+      </a>
+    </nav>
+  </aside>
+
+  <main class="blank-stage" aria-label="Portfolio home">
+    <section class="view-panel me-panel" id="me" data-view="me" hidden>
+      <div class="panel-header">
+        <p class="panel-kicker">Player Profile</p>
+        <h1>Ernst Danielle B. Legaspi</h1>
+      </div>
+
+      <div class="profile-grid">
+        <div class="avatar-frame">
+          <img src="./public/me.png" alt="Ernst Danielle B. Legaspi" />
+        </div>
+
+        <div class="profile-copy">
+          <dl class="stat-list">
+            <div>
+              <dt>Class</dt>
+              <dd>Senior Full Stack Developer</dd>
+            </div>
+            <div>
+              <dt>Specialty</dt>
+              <dd>Product Engineering</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Web, mobile, backend, launch</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Building SerpTrace</dd>
+            </div>
+          </dl>
+
+          <div class="bio-box">
+            <p>
+              I build web and mobile products across frontend, backend, data,
+              and deployment layers. My work focuses on clean interfaces
+              backed by durable systems that can move from idea to launch.
+            </p>
+          </div>
+
+          <div class="quest-box">
+            <p class="panel-kicker">Current Quests</p>
+            <ul>
+              <li>SerpTrace</li>
+            </ul>
+          </div>
+
+          <div class="profile-actions">
+            <a href="mailto:legaspiernstdanielle@gmail.com">Email</a>
+            <a href="https://github.com/ernstlegaspi" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/ernst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view-panel products-panel" id="products" data-view="products" hidden>
+      <div class="panel-header">
+        <p class="panel-kicker">Live Builds</p>
+        <h1>Products</h1>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div>
+            <p class="panel-kicker">Search Intelligence</p>
+            <h2>SerpTrace</h2>
+          </div>
+          <p>
+            A web product for tracking search visibility, reading rank movement,
+            and turning SERP changes into clear operational signals.
+          </p>
+          <dl class="mini-stats">
+            <div>
+              <dt>Status</dt>
+              <dd>Live</dd>
+            </div>
+            <div>
+              <dt>Type</dt>
+              <dd>Web Product</dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd>Full-stack Build</dd>
+            </div>
+          </dl>
+          <div class="profile-actions">
+            <a href="https://serptrace.com" target="_blank" rel="noreferrer">
+              <span class="button-icon icon-web" aria-hidden="true"></span>
+              <span>Visit</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view-panel projects-panel" id="projects" data-view="projects" hidden>
+      <div class="panel-header">
+        <p class="panel-kicker">Build Labs</p>
+        <h1>Projects</h1>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div>
+            <p class="panel-kicker">Prototype / Reservation</p>
+            <h2>Django Booking</h2>
+          </div>
+          <p>
+            Booking platform built with SSR HTML, PostgreSQL persistence, Redis
+            caching, DRF endpoints, and HTMX interaction patterns.
+          </p>
+          <div class="tag-row">
+            <span>Django</span>
+            <span>DRF</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+            <span>HTMX</span>
+          </div>
+          <div class="profile-actions">
+            <a href="https://github.com/ernstlegaspi/django-booking" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="panel-kicker">Clone / Workspace</p>
+            <h2>Trello Clone</h2>
+          </div>
+          <p>
+            Kanban workspace covering boards, lists, cards, API structure, and
+            collaborative task-management flows.
+          </p>
+          <div class="tag-row">
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+          </div>
+          <div class="profile-actions">
+            <a href="https://github.com/ernstlegaspi/trello-clone" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="panel-kicker">Demo / Education</p>
+            <h2>LMS</h2>
+          </div>
+          <p>
+            Learning management demo for course delivery, student progress,
+            instructor workflows, and fast content access.
+          </p>
+          <div class="tag-row">
+            <span>Nuxt</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+          </div>
+          <div class="profile-actions">
+            <a href="https://learning-management-system-alpha.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="https://github.com/ernstlegaspi/learning-management-system" target="_blank"
+              rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="panel-kicker">Demo / Reservation</p>
+            <h2>Booking App</h2>
+          </div>
+          <p>
+            Reservation demo for availability, customer bookings, confirmation
+            flows, and cache-backed responsiveness.
+          </p>
+          <div class="tag-row">
+            <span>Nuxt</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+          </div>
+          <div class="profile-actions">
+            <a href="https://booking-app-coral-kappa.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="https://github.com/ernstlegaspi/booking-app" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="panel-kicker">Demo / Retail</p>
+            <h2>E-commerce</h2>
+          </div>
+          <p>
+            Storefront demo covering product discovery, cart and checkout flow,
+            order handling, and traffic-conscious backend design.
+          </p>
+          <div class="tag-row">
+            <span>Next.js</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+          </div>
+          <div class="profile-actions">
+            <a href="https://e-commerce-green-phi-64.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="https://github.com/ernstlegaspi/e-commerce" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="panel-kicker">Demo / Operations</p>
+            <h2>Admin Dashboard</h2>
+          </div>
+          <p>
+            Dashboard demo for metrics, content control, operational oversight,
+            API access, and internal data views.
+          </p>
+          <div class="tag-row">
+            <span>Next.js</span>
+            <span>PostgreSQL</span>
+            <span>Redis</span>
+          </div>
+          <div class="profile-actions">
+            <a href="https://admin-dashboard-alpha-seven-69.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+            <a href="https://github.com/ernstlegaspi/admin-dashboard" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="view-panel skills-panel" id="skills" data-view="skills" hidden>
+      <div class="panel-header">
+        <p class="panel-kicker">Skill Tree</p>
+        <h1>Skills</h1>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <p class="panel-kicker">Frontend</p>
+          <ul class="skill-list">
+            <li>React.js</li>
+            <li>Next.js</li>
+            <li>Three.js</li>
+            <li>TailwindCSS</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <p class="panel-kicker">Backend</p>
+          <ul class="skill-list">
+            <li>Node.js</li>
+            <li>Nest.js</li>
+            <li>Express.js</li>
+            <li>Python</li>
+            <li>Django</li>
+            <li>FastAPI</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <p class="panel-kicker">Tools / Cloud</p>
+          <ul class="skill-list">
+            <li>Git</li>
+            <li>Docker</li>
+            <li>AWS</li>
+          </ul>
+        </article>
+
+        <article class="skill-card">
+          <p class="panel-kicker">Data / Storage</p>
+          <ul class="skill-list">
+            <li>Redis</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
