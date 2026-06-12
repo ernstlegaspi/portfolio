@@ -1,6 +1,6 @@
 # Ernst Legaspi Portfolio
 
-Vanilla HTML/CSS/JavaScript portfolio with a Three.js scene loaded from a CDN.
+Vanilla HTML/CSS/JavaScript portfolio.
 
 ## Run Locally
 

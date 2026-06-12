@@ -26,7 +26,6 @@ body {
 
 body {
   margin: 0;
-  overflow: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: Arial, sans-serif;
@@ -48,7 +47,6 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: 1;
-  overflow: hidden;
   pointer-events: none;
 }
 
@@ -167,10 +165,6 @@ button {
   transition: width 180ms steps(4, end);
 }
 
-.sidebar[data-expanded="true"] {
-  width: 214px;
-}
-
 .sidebar-toggle {
   display: grid;
   width: 100%;
@@ -210,7 +204,6 @@ button {
   min-height: 48px;
   grid-template-columns: 44px 1fr;
   align-items: center;
-  overflow: hidden;
   border: 2px solid transparent;
   background: transparent;
   color: var(--muted);
@@ -219,15 +212,21 @@ button {
 
 .sidebar-link:hover,
 .sidebar-link:focus-visible {
-  border-color: var(--yellow);
-  background: var(--panel-active);
-  color: var(--text);
+  color: var(--green);
   outline: 0;
 }
 
 .sidebar-link[aria-current="page"] {
-  border-color: var(--green);
-  color: var(--text);
+  color: var(--green);
+}
+
+.sidebar-link:hover .sidebar-icon,
+.sidebar-link:focus-visible .sidebar-icon,
+.sidebar-link[aria-current="page"] .sidebar-icon,
+.sidebar-link:hover .sidebar-label,
+.sidebar-link:focus-visible .sidebar-label,
+.sidebar-link[aria-current="page"] .sidebar-label {
+  color: var(--green);
 }
 
 .sidebar-icon {
@@ -272,15 +271,6 @@ button {
   transition:
     opacity 120ms steps(2, end),
     transform 180ms steps(4, end);
-}
-
-.sidebar[data-expanded="true"] .sidebar-label {
-  opacity: 1;
-  transform: translateX(0) rotateZ(-4deg);
-}
-
-.sidebar[data-expanded="true"] .sidebar-link:nth-child(even) .sidebar-label {
-  transform: translateX(0) rotateZ(4deg);
 }
 
 .view-panel {
@@ -406,10 +396,6 @@ button {
   border-color: var(--green);
 }
 
-.product-card:nth-child(2) {
-  border-color: var(--red);
-}
-
 .product-card h2 {
   margin: 0;
   color: var(--text);
@@ -497,8 +483,7 @@ button {
   margin: 0;
 }
 
-.mini-stats div,
-.store-row > span {
+.mini-stats div {
   border: 2px solid var(--line);
   background: #0a0a0a;
   box-shadow: 3px 3px 0 #000;
@@ -516,33 +501,10 @@ button {
   text-transform: uppercase;
 }
 
-.product-card:nth-child(2) .mini-stats dt {
-  color: var(--red);
-}
-
 .mini-stats dd {
   margin: 0;
   color: var(--text);
   font-weight: 800;
-}
-
-.store-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.store-row > span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px;
-  color: var(--text);
-  font-size: 0.76rem;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .button-icon {
@@ -578,37 +540,6 @@ button {
   height: 2px;
   background: currentColor;
   box-shadow: 0 4px 0 currentColor;
-}
-
-.icon-google-play {
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 14px solid currentColor;
-}
-
-.icon-app-store {
-  border-bottom: 3px solid currentColor;
-}
-
-.icon-app-store::before,
-.icon-app-store::after {
-  position: absolute;
-  left: 7px;
-  width: 3px;
-  height: 15px;
-  background: currentColor;
-  content: "";
-  transform-origin: center;
-}
-
-.icon-app-store::before {
-  transform: rotate(29deg);
-}
-
-.icon-app-store::after {
-  transform: rotate(-29deg);
 }
 
 .profile-grid {
@@ -728,22 +659,33 @@ button {
   outline: 0;
 }
 
+@media (min-width: 641px) {
+  .sidebar[data-expanded="true"] {
+    width: 214px;
+  }
+
+  .sidebar[data-expanded="true"] .sidebar-label {
+    opacity: 1;
+    transform: translateX(0) rotateZ(-4deg);
+  }
+
+  .sidebar[data-expanded="true"] .sidebar-link:nth-child(even) .sidebar-label {
+    transform: translateX(0) rotateZ(4deg);
+  }
+}
+
 @media (max-width: 640px) {
   .sidebar {
     top: 12px;
     bottom: auto;
     left: 12px;
-    width: 60px;
+    width: min(320px, calc(100vw - 24px));
     max-width: calc(100vw - 24px);
-  }
-
-  .sidebar[data-expanded="true"] {
-    width: min(214px, calc(100vw - 24px));
   }
 
   .blank-stage {
     align-items: start;
-    padding: 168px 12px 24px;
+    padding: 204px 12px 24px;
   }
 
   .sidebar-toggle {
@@ -751,8 +693,28 @@ button {
   }
 
   .sidebar-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
     padding: 8px;
+  }
+
+  .sidebar-link {
+    min-height: 44px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0 8px;
+    text-align: center;
+  }
+
+  .sidebar-icon {
+    display: none;
+  }
+
+  .sidebar-label,
+  .sidebar-link:nth-child(even) .sidebar-label {
+    width: auto;
+    opacity: 1;
+    transform: none;
   }
 
   .profile-grid,
