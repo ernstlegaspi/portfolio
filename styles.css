@@ -473,6 +473,10 @@ button {
   border-color: var(--green);
 }
 
+.skill-card:nth-child(6) {
+  border-color: var(--red);
+}
+
 .project-card:nth-child(3n + 1) {
   border-color: var(--green);
 }
@@ -576,6 +580,10 @@ button {
 
 .skill-card:nth-child(5) .skill-list li::before {
   background: var(--green);
+}
+
+.skill-card:nth-child(6) .skill-list li::before {
+  background: var(--red);
 }
 
 .mini-stats {
