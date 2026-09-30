@@ -453,28 +453,20 @@ button {
   padding: 18px;
 }
 
-.skill-card:nth-child(1) {
+.skill-card:nth-child(4n + 1) {
   border-color: var(--green);
 }
 
-.skill-card:nth-child(2) {
+.skill-card:nth-child(4n + 2) {
   border-color: var(--red);
 }
 
-.skill-card:nth-child(3) {
+.skill-card:nth-child(4n + 3) {
   border-color: var(--yellow);
 }
 
-.skill-card:nth-child(4) {
+.skill-card:nth-child(4n) {
   border-color: var(--blue);
-}
-
-.skill-card:nth-child(5) {
-  border-color: var(--green);
-}
-
-.skill-card:nth-child(6) {
-  border-color: var(--red);
 }
 
 .project-card:nth-child(3n + 1) {
@@ -566,24 +558,16 @@ button {
   content: "";
 }
 
-.skill-card:nth-child(2) .skill-list li::before {
+.skill-card:nth-child(4n + 2) .skill-list li::before {
   background: var(--red);
 }
 
-.skill-card:nth-child(3) .skill-list li::before {
+.skill-card:nth-child(4n + 3) .skill-list li::before {
   background: var(--yellow);
 }
 
-.skill-card:nth-child(4) .skill-list li::before {
+.skill-card:nth-child(4n) .skill-list li::before {
   background: var(--blue);
-}
-
-.skill-card:nth-child(5) .skill-list li::before {
-  background: var(--green);
-}
-
-.skill-card:nth-child(6) .skill-list li::before {
-  background: var(--red);
 }
 
 .mini-stats {
