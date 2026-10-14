@@ -4,407 +4,497 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ernst Legaspi's product portfolio." />
+  <meta name="description" content="Choose how to explore Ernst Legaspi’s portfolio." />
+  <meta name="theme-color" content="#090d0b" />
   <title>Ernst Legaspi - Portfolio</title>
   <link rel="icon" href="./favicon.ico" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./portfolio.css?v=20261015-switch" />
+  <link rel="stylesheet" href="./entry.css" id="entry-styles" />
 </head>
 
-<body>
-  <div class="pixel-rain" aria-hidden="true"></div>
-
-  <aside class="sidebar" aria-label="Portfolio navigation" data-expanded="true">
-    <button class="sidebar-toggle" type="button" aria-label="Close sidebar" aria-expanded="true">
-      <span aria-hidden="true">▦</span>
-    </button>
-
-    <nav class="sidebar-nav">
-      <a class="sidebar-link" href="#me" aria-label="Me" data-view-target="me">
-        <span class="sidebar-icon" aria-hidden="true">●</span>
-        <span class="sidebar-label">Me</span>
-      </a>
-      <a class="sidebar-link" href="#products" aria-label="Products" data-view-target="products">
-        <span class="sidebar-icon" aria-hidden="true">◆</span>
-        <span class="sidebar-label">Products</span>
-      </a>
-      <a class="sidebar-link" href="#projects" aria-label="Projects" data-view-target="projects">
-        <span class="sidebar-icon" aria-hidden="true">■</span>
-        <span class="sidebar-label">Projects</span>
-      </a>
-      <a class="sidebar-link" href="#skills" aria-label="Skills" data-view-target="skills">
-        <span class="sidebar-icon" aria-hidden="true">▲</span>
-        <span class="sidebar-label">Skills</span>
-      </a>
+<body data-portfolio="entry">
+  <main class="entry" aria-label="Choose your portfolio experience">
+    <nav class="portfolio-choices" aria-label="Portfolio style">
+      <button class="portfolio-choice" type="button" data-portfolio-choice="normal" aria-label="Normal portfolio website">
+        <svg class="choice-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+          <path d="M5 7H35V33H5V7Z M5 15H35 M13 15V33" />
+          <path class="icon-detail" d="M9 11H11 M15 11H17 M19 21H28 M19 26H25" />
+        </svg>
+        <span class="choice-label">Normal portfolio website</span>
+        <svg class="choice-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <path d="M4 10H16 M10 4L16 10L10 16" />
+        </svg>
+      </button>
+      <button class="portfolio-choice portfolio-choice-3d" type="button" data-portfolio-choice="workshop" aria-label="3d portfolio">
+        <svg class="choice-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+          <path d="M20 4L35 12V28L20 36L5 28V12L20 4Z M5 12L20 20L35 12 M20 20V36" />
+          <path class="icon-detail" d="M12 8L27 16" />
+        </svg>
+        <span class="choice-label">3d portfolio</span>
+        <svg class="choice-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
+          <path d="M4 10H16 M10 4L16 10L10 16" />
+        </svg>
+      </button>
     </nav>
-  </aside>
-
-  <main class="blank-stage" aria-label="Portfolio home">
-    <div class="bounce-game" data-game aria-label="Bouncing target game">
-      <button class="game-target" type="button" data-game-target aria-label="Explode target"></button>
-      <p class="game-guide" data-game-guide>Destroy the green box before it keeps disturbing the screen.</p>
-    </div>
-
-    <section class="view-panel me-panel" id="me" data-view="me" hidden>
-      <div class="panel-header">
-        <p class="panel-kicker">Player Profile</p>
-        <h1>Ernst Danielle B. Legaspi</h1>
-      </div>
-
-      <div class="profile-grid">
-        <div class="avatar-frame">
-          <img src="./public/me.png" alt="Ernst Danielle B. Legaspi" />
-        </div>
-
-        <div class="profile-copy">
-          <dl class="stat-list">
-            <div>
-              <dt>Class</dt>
-              <dd>Senior Full Stack Developer</dd>
-            </div>
-            <div>
-              <dt>Specialty</dt>
-              <dd>Product Engineering</dd>
-            </div>
-            <div>
-              <dt>Focus</dt>
-              <dd>Web, mobile, backend, launch</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>Building Rew &amp; TaskSeal</dd>
-            </div>
-          </dl>
-
-          <div class="bio-box">
-            <p>
-              I build web and mobile products across frontend, backend, data,
-              and deployment layers. My work focuses on clean interfaces
-              backed by durable systems that can move from idea to launch.
-            </p>
-          </div>
-
-          <div class="quest-box">
-            <p class="panel-kicker">Current Quests</p>
-            <ul>
-              <li>Rew</li>
-              <li>TaskSeal</li>
-            </ul>
-          </div>
-
-          <div class="profile-actions">
-            <a href="mailto:legaspiernstdanielle@gmail.com">Email</a>
-            <a href="https://github.com/ernstlegaspi" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://www.linkedin.com/in/ernst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="view-panel products-panel" id="products" data-view="products" hidden>
-      <div class="panel-header">
-        <p class="panel-kicker">Live Builds</p>
-        <h1>Products</h1>
-      </div>
-
-      <div class="products-grid">
-        <article class="product-card">
-          <div>
-            <p class="panel-kicker">Mobile Learning</p>
-            <h2>Rew</h2>
-          </div>
-          <p>
-            A study product built for focused review, mobile learning,
-            and smoother study workflows on the go.
-          </p>
-          <dl class="mini-stats">
-            <div>
-              <dt>Status</dt>
-              <dd>Live</dd>
-            </div>
-            <div>
-              <dt>Type</dt>
-              <dd>Android &amp; iOS App</dd>
-            </div>
-            <div>
-              <dt>Role</dt>
-              <dd>Mobile Build</dd>
-            </div>
-          </dl>
-          <div class="profile-actions">
-            <a href="https://rewstudy.com/" target="_blank" rel="noreferrer">
-              <span class="button-icon icon-web" aria-hidden="true"></span>
-              <span>Website</span>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.rew.study" target="_blank" rel="noreferrer">
-              <span class="button-icon icon-google-play" aria-hidden="true"></span>
-              <span>Google Play</span>
-            </a>
-            <a href="https://apps.apple.com/ph/app/rew-ai-study-companion/id6794576533" target="_blank"
-              rel="noreferrer">
-              <span class="button-icon icon-app-store" aria-hidden="true"></span>
-              <span>App Store</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div>
-            <p class="panel-kicker">Field Service</p>
-            <h2>TaskSeal</h2>
-          </div>
-          <p>
-            A field service product for planning jobs, guiding crews through
-            checklists, and sharing proof of completed work with customers.
-          </p>
-          <dl class="mini-stats">
-            <div>
-              <dt>Status</dt>
-              <dd>Mobile Release Pending</dd>
-            </div>
-            <div>
-              <dt>Type</dt>
-              <dd>Web &amp; Mobile Product</dd>
-            </div>
-            <div>
-              <dt>Role</dt>
-              <dd>Full-stack Build</dd>
-            </div>
-          </dl>
-          <div class="profile-actions">
-            <a href="https://taskseal.org/" target="_blank" rel="noreferrer">
-              <span class="button-icon icon-web" aria-hidden="true"></span>
-              <span>Website</span>
-            </a>
-            <button type="button" disabled aria-label="Google Play — awaiting release" title="Awaiting release">
-              <span class="button-icon icon-google-play" aria-hidden="true"></span>
-              <span>Google Play</span>
-            </button>
-            <button type="button" disabled aria-label="App Store — awaiting release" title="Awaiting release">
-              <span class="button-icon icon-app-store" aria-hidden="true"></span>
-              <span>App Store</span>
-            </button>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="view-panel projects-panel" id="projects" data-view="projects" hidden>
-      <div class="panel-header">
-        <p class="panel-kicker">Build Labs</p>
-        <h1>Projects</h1>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card">
-          <div>
-            <p class="panel-kicker">Prototype / Reservation</p>
-            <h2>Django Booking</h2>
-          </div>
-          <p>
-            Booking platform built with SSR HTML, PostgreSQL persistence, Redis
-            caching, DRF endpoints, and HTMX interaction patterns.
-          </p>
-          <div class="tag-row">
-            <span>Django</span>
-            <span>DRF</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-            <span>HTMX</span>
-          </div>
-          <div class="profile-actions">
-            <a href="https://github.com/ernstlegaspi/django-booking" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <p class="panel-kicker">Clone / Workspace</p>
-            <h2>Trello Clone</h2>
-          </div>
-          <p>
-            Kanban workspace covering boards, lists, cards, API structure, and
-            collaborative task-management flows.
-          </p>
-          <div class="tag-row">
-            <span>Next.js</span>
-            <span>Node.js</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-          </div>
-          <div class="profile-actions">
-            <a href="https://github.com/ernstlegaspi/trello-clone" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <p class="panel-kicker">Demo / Education</p>
-            <h2>LMS</h2>
-          </div>
-          <p>
-            Learning management demo for course delivery, student progress,
-            instructor workflows, and fast content access.
-          </p>
-          <div class="tag-row">
-            <span>Nuxt</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-          </div>
-          <div class="profile-actions">
-            <a href="https://learning-management-system-alpha.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
-            <a href="https://github.com/ernstlegaspi/learning-management-system" target="_blank"
-              rel="noreferrer">Code</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <p class="panel-kicker">Demo / Reservation</p>
-            <h2>Booking App</h2>
-          </div>
-          <p>
-            Reservation demo for availability, customer bookings, confirmation
-            flows, and cache-backed responsiveness.
-          </p>
-          <div class="tag-row">
-            <span>Nuxt</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-          </div>
-          <div class="profile-actions">
-            <a href="https://booking-app-coral-kappa.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
-            <a href="https://github.com/ernstlegaspi/booking-app" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <p class="panel-kicker">Demo / Retail</p>
-            <h2>E-commerce</h2>
-          </div>
-          <p>
-            Storefront demo covering product discovery, cart and checkout flow,
-            order handling, and traffic-conscious backend design.
-          </p>
-          <div class="tag-row">
-            <span>Next.js</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-          </div>
-          <div class="profile-actions">
-            <a href="https://e-commerce-green-phi-64.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
-            <a href="https://github.com/ernstlegaspi/e-commerce" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div>
-            <p class="panel-kicker">Demo / Operations</p>
-            <h2>Admin Dashboard</h2>
-          </div>
-          <p>
-            Dashboard demo for metrics, content control, operational oversight,
-            API access, and internal data views.
-          </p>
-          <div class="tag-row">
-            <span>Next.js</span>
-            <span>PostgreSQL</span>
-            <span>Redis</span>
-          </div>
-          <div class="profile-actions">
-            <a href="https://admin-dashboard-alpha-seven-69.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
-            <a href="https://github.com/ernstlegaspi/admin-dashboard" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="view-panel skills-panel" id="skills" data-view="skills" hidden>
-      <div class="panel-header">
-        <p class="panel-kicker">Skill Tree</p>
-        <h1>Skills</h1>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <p class="panel-kicker">Frontend</p>
-          <ul class="skill-list">
-            <li>React.js</li>
-            <li>Next.js</li>
-            <li>Three.js</li>
-            <li>TailwindCSS</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-          </ul>
-        </article>
-
-        <article class="skill-card">
-          <p class="panel-kicker">Backend</p>
-          <ul class="skill-list">
-            <li>Node.js</li>
-            <li>Nest.js</li>
-            <li>Express.js</li>
-            <li>Python</li>
-            <li>Django</li>
-            <li>FastAPI</li>
-          </ul>
-        </article>
-
-        <article class="skill-card">
-          <p class="panel-kicker">AI</p>
-          <ul class="skill-list">
-            <li>ChatGPT</li>
-            <li>Codex</li>
-            <li>Claude</li>
-            <li>MCP Development &amp; Integration</li>
-            <li>Retrieval-Augmented Generation (RAG)</li>
-            <li>LLM API Integration</li>
-            <li>Prompt Engineering</li>
-            <li>AI Workflow Automation</li>
-          </ul>
-        </article>
-
-        <article class="skill-card">
-          <p class="panel-kicker">Tools / Cloud</p>
-          <ul class="skill-list">
-            <li>Git</li>
-            <li>Docker</li>
-            <li>AWS</li>
-          </ul>
-        </article>
-
-        <article class="skill-card">
-          <p class="panel-kicker">Data / Storage</p>
-          <ul class="skill-list">
-            <li>Redis</li>
-            <li>PostgreSQL</li>
-            <li>MySQL</li>
-            <li>MongoDB</li>
-          </ul>
-        </article>
-
-        <article class="skill-card">
-          <p class="panel-kicker">Android</p>
-          <ul class="skill-list">
-            <li>Kotlin</li>
-          </ul>
-        </article>
-
-        <article class="skill-card">
-          <p class="panel-kicker">iOS</p>
-          <ul class="skill-list">
-            <li>Swift</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+    <noscript><p class="entry-feedback">Enable JavaScript to choose a portfolio.</p></noscript>
   </main>
 
-  <script src="./main.js"></script>
+  <p class="portfolio-status" id="portfolio-status" role="status"></p>
+
+  <template id="normal-template">
+    <div class="pixel-rain" aria-hidden="true"></div>
+
+    <aside class="sidebar" aria-label="Portfolio navigation" data-expanded="true">
+      <button class="sidebar-toggle" type="button" aria-label="Close sidebar" aria-expanded="true">
+        <span aria-hidden="true">▦</span>
+      </button>
+
+      <nav class="sidebar-nav">
+        <a class="sidebar-link" href="#me" aria-label="Me" data-view-target="me">
+          <span class="sidebar-icon" aria-hidden="true">●</span>
+          <span class="sidebar-label">Me</span>
+        </a>
+        <a class="sidebar-link" href="#products" aria-label="Products" data-view-target="products">
+          <span class="sidebar-icon" aria-hidden="true">◆</span>
+          <span class="sidebar-label">Products</span>
+        </a>
+        <a class="sidebar-link" href="#projects" aria-label="Projects" data-view-target="projects">
+          <span class="sidebar-icon" aria-hidden="true">■</span>
+          <span class="sidebar-label">Projects</span>
+        </a>
+        <a class="sidebar-link" href="#skills" aria-label="Skills" data-view-target="skills">
+          <span class="sidebar-icon" aria-hidden="true">▲</span>
+          <span class="sidebar-label">Skills</span>
+        </a>
+      </nav>
+      <button class="sidebar-link sidebar-style-switch" type="button" data-portfolio-switch="workshop" aria-label="Switch to 3D portfolio" title="Switch to 3D portfolio">
+        <span class="sidebar-icon" aria-hidden="true">◇</span>
+        <span class="sidebar-label">3D portfolio</span>
+      </button>
+    </aside>
+
+    <main class="blank-stage" aria-label="Portfolio home">
+      <div class="bounce-game" data-game aria-label="Bouncing target game">
+        <button class="game-target" type="button" data-game-target aria-label="Explode target"></button>
+        <p class="game-guide" data-game-guide>Destroy the green box before it keeps disturbing the screen.</p>
+      </div>
+
+      <section class="view-panel me-panel" id="me" data-view="me" hidden>
+        <div class="panel-header">
+          <p class="panel-kicker">Player Profile</p>
+          <h1>Ernst Danielle B. Legaspi</h1>
+        </div>
+
+        <div class="profile-grid">
+          <div class="avatar-frame">
+            <img src="./public/me.png" alt="Ernst Danielle B. Legaspi" />
+          </div>
+
+          <div class="profile-copy">
+            <dl class="stat-list">
+              <div>
+                <dt>Class</dt>
+                <dd>Senior Full Stack Developer</dd>
+              </div>
+              <div>
+                <dt>Specialty</dt>
+                <dd>Product Engineering</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Web, mobile, backend, launch</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Building Rew &amp; TaskSeal</dd>
+              </div>
+            </dl>
+
+            <div class="bio-box">
+              <p>
+                I build web and mobile products across frontend, backend, data,
+                and deployment layers. My work focuses on clean interfaces
+                backed by durable systems that can move from idea to launch.
+              </p>
+            </div>
+
+            <div class="quest-box">
+              <p class="panel-kicker">Current Quests</p>
+              <ul>
+                <li>Rew</li>
+                <li>TaskSeal</li>
+              </ul>
+            </div>
+
+            <div class="profile-actions">
+              <a href="mailto:legaspiernstdanielle@gmail.com">Email</a>
+              <a href="https://github.com/ernstlegaspi" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/ernst-danielle-legaspi-259547170/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view-panel products-panel" id="products" data-view="products" hidden>
+        <div class="panel-header">
+          <p class="panel-kicker">Live Builds</p>
+          <h1>Products</h1>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div>
+              <p class="panel-kicker">Mobile Learning</p>
+              <h2>Rew</h2>
+            </div>
+            <p>
+              A study product built for focused review, mobile learning,
+              and smoother study workflows on the go.
+            </p>
+            <dl class="mini-stats">
+              <div>
+                <dt>Status</dt>
+                <dd>Live</dd>
+              </div>
+              <div>
+                <dt>Type</dt>
+                <dd>Android &amp; iOS App</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Mobile Build</dd>
+              </div>
+            </dl>
+            <div class="profile-actions">
+              <a href="https://rewstudy.com/" target="_blank" rel="noreferrer">
+                <span class="button-icon icon-web" aria-hidden="true"></span>
+                <span>Website</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.rew.study" target="_blank" rel="noreferrer">
+                <span class="button-icon icon-google-play" aria-hidden="true"></span>
+                <span>Google Play</span>
+              </a>
+              <a href="https://apps.apple.com/ph/app/rew-ai-study-companion/id6794576533" target="_blank"
+                rel="noreferrer">
+                <span class="button-icon icon-app-store" aria-hidden="true"></span>
+                <span>App Store</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div>
+              <p class="panel-kicker">Field Service</p>
+              <h2>TaskSeal</h2>
+            </div>
+            <p>
+              A field service product for planning jobs, guiding crews through
+              checklists, and sharing proof of completed work with customers.
+            </p>
+            <dl class="mini-stats">
+              <div>
+                <dt>Status</dt>
+                <dd>Mobile Release Pending</dd>
+              </div>
+              <div>
+                <dt>Type</dt>
+                <dd>Web &amp; Mobile Product</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Full-stack Build</dd>
+              </div>
+            </dl>
+            <div class="profile-actions">
+              <a href="https://taskseal.org/" target="_blank" rel="noreferrer">
+                <span class="button-icon icon-web" aria-hidden="true"></span>
+                <span>Website</span>
+              </a>
+              <button type="button" disabled aria-label="Google Play — awaiting release" title="Awaiting release">
+                <span class="button-icon icon-google-play" aria-hidden="true"></span>
+                <span>Google Play</span>
+              </button>
+              <button type="button" disabled aria-label="App Store — awaiting release" title="Awaiting release">
+                <span class="button-icon icon-app-store" aria-hidden="true"></span>
+                <span>App Store</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view-panel projects-panel" id="projects" data-view="projects" hidden>
+        <div class="panel-header">
+          <p class="panel-kicker">Build Labs</p>
+          <h1>Projects</h1>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div>
+              <p class="panel-kicker">Prototype / Reservation</p>
+              <h2>Django Booking</h2>
+            </div>
+            <p>
+              Booking platform built with SSR HTML, PostgreSQL persistence, Redis
+              caching, DRF endpoints, and HTMX interaction patterns.
+            </p>
+            <div class="tag-row">
+              <span>Django</span>
+              <span>DRF</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+              <span>HTMX</span>
+            </div>
+            <div class="profile-actions">
+              <a href="https://github.com/ernstlegaspi/django-booking" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="panel-kicker">Clone / Workspace</p>
+              <h2>Trello Clone</h2>
+            </div>
+            <p>
+              Kanban workspace covering boards, lists, cards, API structure, and
+              collaborative task-management flows.
+            </p>
+            <div class="tag-row">
+              <span>Next.js</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+            </div>
+            <div class="profile-actions">
+              <a href="https://github.com/ernstlegaspi/trello-clone" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="panel-kicker">Demo / Education</p>
+              <h2>LMS</h2>
+            </div>
+            <p>
+              Learning management demo for course delivery, student progress,
+              instructor workflows, and fast content access.
+            </p>
+            <div class="tag-row">
+              <span>Nuxt</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+            </div>
+            <div class="profile-actions">
+              <a href="https://learning-management-system-alpha.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+              <a href="https://github.com/ernstlegaspi/learning-management-system" target="_blank"
+                rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="panel-kicker">Demo / Reservation</p>
+              <h2>Booking App</h2>
+            </div>
+            <p>
+              Reservation demo for availability, customer bookings, confirmation
+              flows, and cache-backed responsiveness.
+            </p>
+            <div class="tag-row">
+              <span>Nuxt</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+            </div>
+            <div class="profile-actions">
+              <a href="https://booking-app-coral-kappa.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+              <a href="https://github.com/ernstlegaspi/booking-app" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="panel-kicker">Demo / Retail</p>
+              <h2>E-commerce</h2>
+            </div>
+            <p>
+              Storefront demo covering product discovery, cart and checkout flow,
+              order handling, and traffic-conscious backend design.
+            </p>
+            <div class="tag-row">
+              <span>Next.js</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+            </div>
+            <div class="profile-actions">
+              <a href="https://e-commerce-green-phi-64.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+              <a href="https://github.com/ernstlegaspi/e-commerce" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="panel-kicker">Demo / Operations</p>
+              <h2>Admin Dashboard</h2>
+            </div>
+            <p>
+              Dashboard demo for metrics, content control, operational oversight,
+              API access, and internal data views.
+            </p>
+            <div class="tag-row">
+              <span>Next.js</span>
+              <span>PostgreSQL</span>
+              <span>Redis</span>
+            </div>
+            <div class="profile-actions">
+              <a href="https://admin-dashboard-alpha-seven-69.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+              <a href="https://github.com/ernstlegaspi/admin-dashboard" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="view-panel skills-panel" id="skills" data-view="skills" hidden>
+        <div class="panel-header">
+          <p class="panel-kicker">Skill Tree</p>
+          <h1>Skills</h1>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <p class="panel-kicker">Frontend</p>
+            <ul class="skill-list">
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Three.js</li>
+              <li>TailwindCSS</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="panel-kicker">Backend</p>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Nest.js</li>
+              <li>Express.js</li>
+              <li>Python</li>
+              <li>Django</li>
+              <li>FastAPI</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="panel-kicker">AI</p>
+            <ul class="skill-list">
+              <li>ChatGPT</li>
+              <li>Codex</li>
+              <li>Claude</li>
+              <li>MCP Development &amp; Integration</li>
+              <li>Retrieval-Augmented Generation (RAG)</li>
+              <li>LLM API Integration</li>
+              <li>Prompt Engineering</li>
+              <li>AI Workflow Automation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="panel-kicker">Tools / Cloud</p>
+            <ul class="skill-list">
+              <li>Git</li>
+              <li>Docker</li>
+              <li>AWS</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="panel-kicker">Data / Storage</p>
+            <ul class="skill-list">
+              <li>Redis</li>
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="panel-kicker">Android</p>
+            <ul class="skill-list">
+              <li>Kotlin</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <p class="panel-kicker">iOS</p>
+            <ul class="skill-list">
+              <li>Swift</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </template>
+
+  <template id="workshop-template">
+    <header class="studio-header">
+      <div class="identity">
+        <svg class="identity-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M3 3h11v11H3zM18 3h11v11H18zM3 18h11v11H3z" fill="currentColor"/><path d="M18 18h11v11H18z" stroke="currentColor" stroke-width="2"/></svg>
+        <div><span class="identity-name">Ernst Legaspi</span><span class="identity-role">Product engineer &amp; builder</span></div>
+      </div>
+    </header>
+
+    <main class="workshop-stage" id="workshop-stage" aria-label="Interactive developer workshop">
+      <div class="studio-intro">
+        <h1>A little world.<br /><span>A lot of building.</span></h1>
+        <p>Pick a station. See what I’m working on.</p>
+      </div>
+
+      <canvas id="workshop-canvas" role="img" aria-label="A 3D workshop with Rew and TaskSeal desks, project shelves, a skills rack, and a profile terminal. Use the station buttons to explore."></canvas>
+
+      <div class="station-labels" id="station-labels" hidden>
+        <button class="station-label" type="button" data-station="profile">About me <span class="label-arrow" aria-hidden="true">↗</span></button>
+        <button class="station-label" type="button" data-station="rew">Rew <span class="label-arrow" aria-hidden="true">↗</span></button>
+        <button class="station-label" type="button" data-station="taskseal">TaskSeal <span class="label-arrow" aria-hidden="true">↗</span></button>
+        <button class="station-label" type="button" data-station="projects">Projects <span class="label-arrow" aria-hidden="true">↗</span></button>
+        <button class="station-label" type="button" data-station="skills">Skills <span class="label-arrow" aria-hidden="true">↗</span></button>
+      </div>
+
+      <div class="scene-notice" id="scene-notice" role="status">
+        <span class="loading-cube" aria-hidden="true"></span>
+        <p id="scene-notice-text">Opening the workshop…</p>
+      </div>
+
+      <button class="wall-style-switch" id="wall-style-switch" type="button" data-portfolio-switch="normal" aria-label="Switch to normal portfolio" title="Switch to normal portfolio">
+        <span aria-hidden="true">⇄</span><span>Normal portfolio</span>
+      </button>
+
+      <div class="view-controls" aria-label="Workshop view controls">
+        <button type="button" id="reset-view" title="Reset camera" disabled><span aria-hidden="true">↺</span> Reset view</button>
+        <button type="button" id="motion-toggle" aria-pressed="false" disabled><span class="motion-icon" aria-hidden="true">Ⅱ</span> <span id="motion-label">Pause motion</span></button>
+      </div>
+    </main>
+
+    <footer class="studio-footer">
+      <div class="studio-footnote"><span id="interaction-hint">Drag to look around <span aria-hidden="true">·</span> Scroll to zoom</span><span id="companion-note" role="status" aria-live="polite">The little green cube says hello.</span></div>
+    </footer>
+
+    <dialog class="detail-panel" id="detail-panel" aria-labelledby="detail-title">
+      <div class="detail-header">
+        <p class="eyebrow" id="detail-kicker"></p>
+        <button class="close-detail" type="button" id="close-detail" aria-label="Close details"><span aria-hidden="true">×</span></button>
+        <h2 id="detail-title"></h2>
+        <p class="detail-subtitle" id="detail-subtitle"></p>
+      </div>
+      <div class="detail-content" id="detail-content" aria-live="polite"></div>
+    </dialog>
+  </template>
+
+  <script type="module" src="./entry.js?v=20261015-switch"></script>
 </body>
 
 </html>

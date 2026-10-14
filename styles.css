@@ -247,6 +247,8 @@ button {
   bottom: 16px;
   left: 16px;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
   width: 68px;
   border: 2px solid var(--line);
   background: var(--panel);
@@ -256,6 +258,7 @@ button {
 
 .sidebar-toggle {
   display: grid;
+  flex-shrink: 0;
   width: 100%;
   height: 64px;
   place-items: center;
@@ -297,6 +300,26 @@ button {
   background: transparent;
   color: var(--muted);
   text-decoration: none;
+}
+
+.sidebar-style-switch {
+  flex-shrink: 0;
+  grid-template-columns: 44px minmax(0, 1fr);
+  overflow: hidden;
+  margin: auto 8px 10px;
+  padding: 0;
+  text-align: left;
+}
+
+.sidebar-style-switch .sidebar-icon::before {
+  content: "3D";
+  color: var(--green);
+}
+
+.sidebar-style-switch:hover,
+.sidebar-style-switch:focus-visible {
+  background: var(--panel-active);
+  border-color: var(--green);
 }
 
 .sidebar-link:hover,
@@ -792,6 +815,11 @@ button {
 }
 
 @media (min-width: 641px) {
+  .sidebar-nav {
+    min-height: 0;
+    overflow: hidden auto;
+  }
+
   .sidebar[data-expanded="true"] {
     width: 214px;
   }
@@ -821,11 +849,11 @@ button {
 
   .blank-stage {
     align-items: start;
-    padding: 204px 12px 24px;
+    padding: 252px 12px 24px;
   }
 
   .bounce-game {
-    inset: 204px 12px 24px;
+    inset: 252px 12px 24px;
   }
 
   .game-target {
@@ -858,6 +886,23 @@ button {
 
   .sidebar-label {
     display: none;
+  }
+
+  .sidebar .sidebar-style-switch {
+    grid-template-columns: 1fr;
+    margin: 0 8px 8px;
+    padding: 0 8px;
+  }
+
+  .sidebar-style-switch .sidebar-icon {
+    display: none;
+  }
+
+  .sidebar-style-switch .sidebar-label {
+    display: block;
+    width: auto;
+    opacity: 1;
+    transform: none;
   }
 
   .sidebar[data-expanded="true"] .sidebar-nav {
